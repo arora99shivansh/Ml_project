@@ -14,6 +14,10 @@ from src.components.data_transformation import DataTransformationConfig
 
 from src.exception import CustomException
 from src.logger import logging
+from src.utils import save_object
+from src.components.model_trainer import ModelTrainerConfig
+from src.components.model_trainer import ModelTrainer
+
 
 
 # -------------------------------------------------
@@ -125,4 +129,8 @@ if __name__ =="__main__":
     train_data,test_data=obj.initiate_data_ingestion()
     
     data_tranformation=DataTransformation()
-    data_tranformation.initiate_data_transform(train_data,test_data)
+    train_arr,test_arr=data_tranformation.initiate_data_transform(train_data,test_data)
+    
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
+    
