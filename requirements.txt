@@ -1,0 +1,4 @@
+#numpy==
+numpy 
+pandas
+#-e .  link krdega setup se
