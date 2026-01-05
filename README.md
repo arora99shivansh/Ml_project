@@ -50,3 +50,6 @@ streamlit run streamlit_app.py
 Model Performance
 Best Model: Linear Regression
 R² Score: ~0.88
+
+<img width="1903" height="907" alt="image" src="https://github.com/user-attachments/assets/90697304-e382-4527-bd8c-a75b7f2a48b6" />
+
