@@ -1,9 +1,11 @@
-#numpy==
-numpy 
+numpy
 pandas
 python-dotenv
 mysql-connector-python
 pymysql
 scikit-learn
-sqlalchemy
+seaborn
+catboost
+xgboost
+mlflow
 #-e .  link krdega setup se
