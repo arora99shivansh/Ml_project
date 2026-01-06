@@ -9,4 +9,7 @@ catboost
 xgboost
 mlflow
 streamlit
+Flask
+dill
+gunicorn
 #-e .  link krdega setup se

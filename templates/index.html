@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Performance Predictor</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="box">
+    <h2>🎓 Student Performance Predictor</h2>
+
+    <form action="/predict" method="post">
+
+        <!-- Gender -->
+        <select name="gender" required>
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <!-- Race -->
+        <select name="race_ethnicity" required>
+            <option value="" disabled selected>Race / Ethnicity</option>
+            <option value="group A">Group A</option>
+            <option value="group B">Group B</option>
+            <option value="group C">Group C</option>
+            <option value="group D">Group D</option>
+            <option value="group E">Group E</option>
+        </select>
+
+        <!-- Parent Education -->
+        <select name="parental_level_of_education" required>
+            <option value="" disabled selected>Parental Education</option>
+            <option value="some high school">Some High School</option>
+            <option value="high school">High School</option>
+            <option value="associate's degree">Associate's Degree</option>
+            <option value="bachelor's degree">Bachelor's Degree</option>
+            <option value="master's degree">Master's Degree</option>
+        </select>
+
+        <!-- Lunch -->
+        <select name="lunch" required>
+            <option value="" disabled selected>Lunch Type</option>
+            <option value="standard">Standard</option>
+            <option value="free/reduced">Free / Reduced</option>
+        </select>
+
+        <!-- Test Prep -->
+        <select name="test_preparation_course" required>
+            <option value="" disabled selected>Test Preparation</option>
+            <option value="none">None</option>
+            <option value="completed">Completed</option>
+        </select>
+
+        <!-- Scores -->
+        <input type="number" name="reading_score" placeholder="📖 Reading Score (0–100)" min="0" max="100" required>
+        <input type="number" name="writing_score" placeholder="✍ Writing Score (0–100)" min="0" max="100" required>
+
+        <!-- Button -->
+        <button type="submit">📊 Predict Math Score</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            🎯 Predicted Math Score: <strong>{{ prediction }}</strong>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
