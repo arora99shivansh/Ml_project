@@ -18,12 +18,12 @@ The project includes data ingestion from MySQL, data preprocessing, model traini
 
 Machine Learning Workflow:
 Data Ingestion
-1)Reads data from MySQL
-2)Splits into train & test datasets
+1Reads data from MySQL
+2Splits into train & test datasets
 
 Data Transformation
-1)Numerical: Median Imputation + Standard Scaling
-2)Categorical: Mode Imputation + One-Hot Encoding
+1Numerical: Median Imputation + Standard Scaling
+2Categorical: Mode Imputation + One-Hot Encoding
 
 Saved as preprocessor.pkl
 
@@ -50,3 +50,6 @@ streamlit run streamlit_app.py
 Model Performance
 Best Model: Linear Regression
 R² Score: ~0.88
+
+
+
